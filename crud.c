@@ -77,6 +77,7 @@ int main() {
     // Menu
     int choice;
     do {
+        // clear_screen();
         printf("\nMenu:\n");
         printf("1. Add Contact\n");
         printf("2. View Contacts\n");
@@ -117,6 +118,8 @@ int main() {
                 if (rc != SQLITE_OK) {
                     handle_error("SQL error");
                 }
+                printf("Press Enter to continue...");
+                getchar();
                 break;
             }
             case 3: {
